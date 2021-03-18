@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Kaushan+Script&display=swap');
+
+:root{
+    --bg_color : #222831;
+    --txt_color : #f0e5e9;
+    --prim_color : #e23e57;
+    --sec_color : #522546;
+}
+
+.ultra-bg{
+    background-color: var(--bg_color);
+    color:var(--txt_color);
+
+    font-size: 1.2rem;
+}
+
+h1{
+    font-family: 'Kaushan Script', cursive;
+}
+
+body{
+    font-family: 'Berkshire Swash', cursive;
+    letter-spacing: 0.02rem;
+
+    margin:auto;
+    padding-inline-start: 0px;
+}
+
+.non-bullet{
+    list-style : none;
+    text-decoration : none;
+}
+
+.prim_link{
+    text-decoration: none;
+    text-align: center;
+    line-height: 4rem;
+
+    padding: 0.5rem 1rem 0.5rem 1rem;
+
+    border-style : solid;
+    border-color: var(--txt_color);
+    border-width:0.1rem;
+
+    color: var(--txt_color);
+    background-color: var(--prim_color);
+}
+
+.sec_link{
+    text-decoration: none;
+    text-align: center;
+    line-height: 4rem;
+
+    padding: 0.5rem 1rem 0.5rem 1rem;
+
+    border-style : solid;
+    border-color: var(--prim_color);
+    border-width:0.1rem;
+
+    color: var(--prim_color);
+}
+
+/**Navigation Bar**/
+.navbar{
+    background-color: var(--prim_color);
+}
