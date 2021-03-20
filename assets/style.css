@@ -31,6 +31,11 @@ body{
     text-decoration : none;
 }
 
+.lined-link{
+    display: inline;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
 .prim_link{
     text-decoration: none;
     text-align: center;
@@ -60,7 +65,17 @@ body{
     color: var(--prim_color);
 }
 
+/**Images**/
+.main-book-img{
+    height: auto;
+        max-width:20%;
+}
+
+
+
+
 /**Navigation Bar**/
 .navbar{
     background-color: var(--prim_color);
+    padding: 0.25rem 0.5rem 0.25rem 0.5rem;
 }
