@@ -30,7 +30,20 @@ body{
 
 html{
     margin-top: 5rem;
+}
+
+/**Scroll Controller**/
+#scroll-ctrl{
+    height:100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
     scroll-padding-top: 5rem;
+    scroll-margin-top: 5rem;
+}
+
+.here{
+    scroll-snap-align: start;
+
 }
 
 
@@ -44,6 +57,12 @@ html{
     padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
+p{
+    margin:0rem;
+}
+
+
+/**Links**/
 .prim_link{
     text-decoration: none;
     text-align: center;
@@ -68,7 +87,7 @@ html{
     text-transform: uppercase;
 
     display:inline-block;
-    margin: 0.5rem 0.15rem 0.25rem 0.15rem;
+    margin: 1rem 0.15rem 1rem 0.15rem;
 
     padding: 0.5rem 1rem 0.5rem 1rem;
 
@@ -79,11 +98,13 @@ html{
     color: var(--prim_color);
 }
 
+
 .sub-title{
     text-transform: uppercase;
     letter-spacing: 0.4rem;
     font-weight: 700;
-    
+    margin:0rem -0.4rem 0rem 0rem;
+    /**TOP RIGHT BOTTOM LEFT**/
 }
 
 /**Images**/
@@ -95,8 +116,31 @@ html{
     display:flex;
     align-items: center;
     justify-content: center;
+
 }
 
+.next-to-next{
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-evenly;
+}
+
+.box-light{
+    border-color: var(--txt_color);
+    border: 0.2rem;
+    border-style: solid;
+    padding: 5rem;
+    flex-basis:0;
+}
+
+.box-dark{
+    border-color: var(--bg_color);
+    border: 0.2rem;
+    border-style: solid;
+    padding: 5rem;
+    flex-basis:0;
+}
 
 
 /**Navigation Bar**/
@@ -137,8 +181,17 @@ html{
 /**Footer**/
 #footer{
     background-color: var(--sec_color);
+    opacity: 50%;
     text-align: center;
-    padding: 4rem;
+    padding: 0.5rem 4rem 0.5rem 4rem;
+    font-size: 0.7rem;
+
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    position: fixed;
+    bottom:0;
+    left:0;
 }
 
 
@@ -175,12 +228,15 @@ html{
     color:var(--bg_color);
     padding: 5rem;
     
+    text-align: center;
 
 }
 
 /**Compilers**/
 #compilers{
     padding: 5rem;
+
+    text-align: center;
 }
 
 /**CreativeHead**/
@@ -188,9 +244,13 @@ html{
     background-color: var(--txt_color);
     color:var(--bg_color);
     padding: 5rem;
+
+    text-align: center;
 }
 
 /**CoAuthors**/
 #coauthors{
     padding: 5rem;
+
+    text-align: center;
 }
