@@ -34,10 +34,10 @@ html{
 
 /**Scroll Controller**/
 #scroll-ctrl{
-    height:100vh;
+    height:85vh;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-    scroll-padding-top: 5rem;
+
     scroll-margin-top: 5rem;
 }
 
@@ -229,6 +229,7 @@ p{
     padding: 5rem;
     
     text-align: center;
+    height:70vh;
 
 }
 
@@ -237,6 +238,7 @@ p{
     padding: 5rem;
 
     text-align: center;
+    height:70vh;
 }
 
 /**CreativeHead**/
@@ -246,11 +248,15 @@ p{
     padding: 5rem;
 
     text-align: center;
+    height:70vh;
 }
 
 /**CoAuthors**/
 #coauthors{
+    height:70vh;
     padding: 5rem;
 
     text-align: center;
+    align-content: space-around;
+    
 }
