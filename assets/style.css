@@ -20,6 +20,10 @@ h1{
     font-family: 'Kaushan Script', cursive;
 }
 
+h2{
+    margin:0;
+}
+
 body{
     font-family: 'Nunito', sans-serif;
     letter-spacing: 0.02rem;
@@ -34,7 +38,7 @@ html{
 
 /**Scroll Controller**/
 #scroll-ctrl{
-    height:85vh;
+    height:86vh;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
 
@@ -50,6 +54,7 @@ html{
 .non-bullet{
     list-style : none;
     text-decoration : none;
+    padding:0;
 }
 
 .lined-link{
@@ -104,6 +109,13 @@ p{
     letter-spacing: 0.4rem;
     font-weight: 700;
     margin:0rem -0.4rem 0rem 0rem;
+    /**TOP RIGHT BOTTOM LEFT**/
+}
+
+.sub-title2{
+    letter-spacing: 0.2rem;
+    font-weight: 700;
+    margin:-0.4rem -0.2rem 1rem 0rem;
     /**TOP RIGHT BOTTOM LEFT**/
 }
 
@@ -180,8 +192,6 @@ p{
 
 /**Footer**/
 #footer{
-    background-color: var(--sec_color);
-    opacity: 50%;
     text-align: center;
     padding: 0.5rem 4rem 0.5rem 4rem;
     font-size: 0.7rem;
@@ -215,6 +225,18 @@ p{
     justify-content: center;
 }
 
+#card_white{
+    background-color: var(--txt_color);
+    color:var(--bg_color);
+    height:80vh;
+}
+
+#card_black{
+    background-color: var(--bg_color);
+    color:var(--txt_color);
+    height:80vh;
+}
+
 
 /**Home**/
 #home{
@@ -224,13 +246,15 @@ p{
 
 /**About**/
 #about{
-    background-color: var(--txt_color);
-    color:var(--bg_color);
-    padding: 5rem;
-    
-    text-align: center;
-    height:70vh;
+    margin:0;
+    position:relative;
+    top:50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 
+    padding: 5rem;
+
+    text-align: center;
 }
 
 /**Compilers**/
@@ -243,20 +267,22 @@ p{
 
 /**CreativeHead**/
 #creative-head{
-    background-color: var(--txt_color);
-    color:var(--bg_color);
+
     padding: 5rem;
 
     text-align: center;
-    height:70vh;
 }
 
 /**CoAuthors**/
 #coauthors{
     height:70vh;
-    padding: 5rem;
+    padding: 5rem 3rem 5rem 3rem;
 
     text-align: center;
     align-content: space-around;
-    
+}
+
+#coauthors .sec_link{
+    margin-top : 0.5rem;
+    margin-bottom: 0.5rem;
 }
