@@ -25,6 +25,7 @@ h2{
 }
 
 body{
+    
     font-family: 'Nunito', sans-serif;
     letter-spacing: 0.02rem;
 
@@ -45,6 +46,15 @@ html{
     scroll-margin-top: 5rem;
 }
 
+#scroll-ctrl::-webkit-scrollbar{
+    display: none;
+}
+
+#scroll-ctrl{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
 .here{
     scroll-snap-align: start;
 
@@ -60,6 +70,7 @@ html{
 .lined-link{
     display: inline;
     padding: 0.5rem 1rem 0.5rem 1rem;
+    text-decoration: none;
 }
 
 p{
@@ -190,21 +201,6 @@ p{
 }
 
 
-/**Footer**/
-#footer{
-    text-align: center;
-    padding: 0.5rem 4rem 0.5rem 4rem;
-    font-size: 0.7rem;
-
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    position: fixed;
-    bottom:0;
-    left:0;
-}
-
-
 #container{
     overflow: hidden;
     display: flex;
@@ -225,16 +221,28 @@ p{
     justify-content: center;
 }
 
+#card_home{
+    background-image: url("/assets/imgs/home-bg.jpg");
+    background-color: var(--bg_color);
+    height:90vh;
+}
+
 #card_white{
     background-color: var(--txt_color);
     color:var(--bg_color);
-    height:80vh;
+    height:90vh;
 }
 
 #card_black{
     background-color: var(--bg_color);
     color:var(--txt_color);
-    height:80vh;
+    height:90vh;
+}
+
+#card_mid{
+    color: var(--txt_color);
+    background-color:var(--sec_color);
+    height:50vh;
 }
 
 
@@ -259,14 +267,23 @@ p{
 
 /**Compilers**/
 #compilers{
-    padding: 5rem;
+    margin:0;
+    position:relative;
+    top:50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 
+    padding: 5rem;
     text-align: center;
-    height:70vh;
 }
 
 /**CreativeHead**/
 #creative-head{
+    margin:0;
+    position:relative;
+    top:50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 
     padding: 5rem;
 
@@ -275,7 +292,12 @@ p{
 
 /**CoAuthors**/
 #coauthors{
-    height:70vh;
+    margin:0;
+    position:relative;
+    top:50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
     padding: 5rem 3rem 5rem 3rem;
 
     text-align: center;
@@ -285,4 +307,18 @@ p{
 #coauthors .sec_link{
     margin-top : 0.5rem;
     margin-bottom: 0.5rem;
+}
+
+/**Footer**/
+#footer{
+    text-align: center;
+    padding: 0.5rem 4rem 0.5rem 4rem;
+    font-size: 0.7rem;
+
+    margin:0;
+    position:relative;
+    top:50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
 }
