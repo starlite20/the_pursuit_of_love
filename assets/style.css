@@ -276,6 +276,27 @@ p{
     text-align: center;
 }
 
+.ansar:hover{
+    background-image: url("/assets/imgs/ansar.jpg");
+    background-size: 110%;
+    background-position: center;
+}
+
+.amrita:hover{
+    background-image: url("/assets/imgs/amrita.jpg");
+    background-size: 110%;
+    background-position: center;
+}
+
+.suhail:hover{
+    background-image: url("/assets/imgs/suhail.jpg");
+    background-size: 110%;
+    background-position: center;
+    background-blend-mode: overlay;
+}
+
+
+
 /**CreativeHead**/
 #creative-head{
     margin:0;
