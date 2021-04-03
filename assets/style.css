@@ -62,6 +62,9 @@ html{
     scroll-snap-align: start;
 }
 
+.text-deco-remove{
+    text-decoration: none;
+}
 
 .non-bullet{
     list-style : none;
@@ -150,7 +153,6 @@ p{
 .main-book-img{
     max-width:80%;
     object-fit: fill;
-    ;
 }
 
 .floating{
@@ -172,16 +174,19 @@ p{
     border-color: var(--txt_color);
     border: 0.2rem;
     border-style: solid;
-    padding: 5rem;
+    
+    margin: 1rem;
+    padding: 4rem;
     flex-basis:0;
 
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    min-width:26vmin;
+    max-width:30vmin;
+    max-height:25vmin;
 
-    min-width:25vmin;
-    min-height: 12vmin;
-    max-width:25vmin;
-    max-height:20vmin;
+    align-self: center;
+    align-content: center;
+    justify-content:center;
+    justify-self: center;
 }
 
 .box-dark{
@@ -250,6 +255,7 @@ p{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-content:space-around;
 
     flex-wrap:wrap;
 }
@@ -293,7 +299,6 @@ p{
 
 /**Home**/
 #home{
-
     padding-bottom: 5rem;
 }
 
@@ -321,24 +326,10 @@ p{
     text-align: center;
 }
 
-.ansar:hover{
-    background-image: url("/assets/imgs/ansar.jpg");
-    background-size: 110%;
-    background-position: center;
+.bg:hover{
+    background-image:linear-gradient(var(--prim_color),var(--sec_color));
 }
 
-.amrita:hover{
-    background-image: url("/assets/imgs/amrita.jpg");
-    background-size: 110%;
-    background-position: center;
-}
-
-.suhail:hover{
-    background-image: url("/assets/imgs/suhail.jpg");
-    background-size: 110%;
-    background-position: center;
-    background-blend-mode: overlay;
-}
 
 
 
