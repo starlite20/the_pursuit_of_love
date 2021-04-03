@@ -16,6 +16,7 @@
     max-width: 100%;
 }
 
+
 h1{
     font-family: 'Kaushan Script', cursive;
 }
@@ -35,6 +36,7 @@ body{
 
 html{
     margin-top: 5rem;
+    
 }
 
 /**Scroll Controller**/
@@ -42,6 +44,7 @@ html{
     height:86vh;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
+    scroll-behavior: smooth;
 
     scroll-margin-top: 5rem;
 }
@@ -74,6 +77,10 @@ html{
 
 p{
     margin:0rem;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 
 
@@ -96,13 +103,18 @@ p{
     background-color: var(--prim_color);
 }
 
+.prim_link:hover{
+    background-color: var(--sec_color);
+    animation: fadeIn ease 1s;
+}
+
 .sec_link{
     text-decoration: none;
     text-align: center;
     text-transform: uppercase;
 
     display:inline-block;
-    margin: 1rem 0.15rem 1rem 0.15rem;
+    margin: 1rem 0.15rem 0rem 0.15rem;
 
     padding: 0.5rem 1rem 0.5rem 1rem;
 
@@ -111,6 +123,11 @@ p{
     border-width:0.1rem;
 
     color: var(--prim_color);
+}
+
+.sec_link:hover{
+    background-color: var(--txt_color);
+    animation: fadeIn ease 1s;
 }
 
 
@@ -131,7 +148,9 @@ p{
 
 /**Images**/
 .main-book-img{
-    max-width:60%;
+    max-width:80%;
+    object-fit: fill;
+    ;
 }
 
 .floating{
@@ -144,6 +163,7 @@ p{
 .next-to-next{
     display:flex;
     flex-direction: row;
+    flex-wrap: wrap;
     
     justify-content: space-evenly;
 }
@@ -154,15 +174,39 @@ p{
     border-style: solid;
     padding: 5rem;
     flex-basis:0;
+
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    min-width:25vmin;
+    min-height: 12vmin;
+    max-width:25vmin;
+    max-height:20vmin;
 }
 
 .box-dark{
+    min-width:25vmin;
+    min-height: 12vmin;
+    max-width:30vmin;
+    max-height:20vmin;
+
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    height: 60%;
+
+    justify-content: center;
+    vertical-align: middle;
+
     border-color: var(--bg_color);
     border: 0.2rem;
     border-style: solid;
     padding: 5rem;
-    flex-basis:0;
+    /*flex-basis:0;*/
+
+    align-items: center;
+    align-content: center;position: relative;
 }
+
 
 
 /**Navigation Bar**/
@@ -195,9 +239,10 @@ p{
 }
 
 .navbar nav a:hover{
-    color: var(--prim_color);
     background-color: var(--txt_color);
+    animation: fadeIn ease 1s;
 }
+
 
 
 #container{
@@ -205,7 +250,8 @@ p{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-top: 20px;
+
+    flex-wrap:wrap;
 }
 
 #img-container{
@@ -247,7 +293,7 @@ p{
 
 /**Home**/
 #home{
-    padding-top: 2rem;
+
     padding-bottom: 5rem;
 }
 
@@ -260,7 +306,6 @@ p{
     transform: translateY(-50%);
 
     padding: 5rem;
-
     text-align: center;
 }
 
@@ -306,7 +351,6 @@ p{
     transform: translateY(-50%);
 
     padding: 5rem;
-
     text-align: center;
 }
 
@@ -350,4 +394,34 @@ p{
 .footer-text1{
     letter-spacing: 0.5rem;
     text-transform: uppercase;
+}
+
+
+
+
+/**Animation Keyframes**/
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+    
+@-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
 }
