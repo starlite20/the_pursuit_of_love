@@ -45,8 +45,6 @@ html{
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     scroll-behavior: smooth;
-
-    scroll-margin-top: 5rem;
 }
 
 #scroll-ctrl::-webkit-scrollbar{
@@ -470,5 +468,17 @@ p{
 
     .navitem{
         font-size: 0.8rem;
+    }
+
+
+
+    /**Scroll**/
+    #scroll-ctrl{
+        height:86vh;
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+    
+        scroll-margin-top: 5rem;
     }
 }
