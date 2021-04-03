@@ -2,9 +2,9 @@
 
 :root{
     --bg_color : #222831;
-    --txt_color : #f0e5e9;
-    --prim_color : #e23e57;
-    --sec_color : #522546;
+    --txt_color : #e5dada;
+    --prim_color : #b9375e;
+    --sec_color : #720026;
 }
 
 
@@ -84,6 +84,7 @@ p{
     margin-block-end: 0em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+    margin-bottom: 0.2rem;
 }
 
 
@@ -94,7 +95,7 @@ p{
     text-transform: uppercase;
 
     display:inline-block;
-    margin: 0.55rem 0.15rem 0.25rem 0.15rem;
+    margin: 0.25rem 0.15rem 0.25rem 0.15rem;
 
     padding: 0.5rem 1rem 0.5rem 1rem;
 
@@ -108,7 +109,7 @@ p{
 
 .prim_link:hover{
     background-color: var(--sec_color);
-    animation: fadeIn ease 1s;
+    animation: fadeIn_prim ease 1s;
 }
 
 .sec_link{
@@ -117,7 +118,7 @@ p{
     text-transform: uppercase;
 
     display:inline-block;
-    margin: 1rem 0.15rem 0rem 0.15rem;
+    margin: 0.25rem 0.15rem 0.25rem 0.15rem;
 
     padding: 0.5rem 1rem 0.5rem 1rem;
 
@@ -130,7 +131,7 @@ p{
 
 .sec_link:hover{
     background-color: var(--txt_color);
-    animation: fadeIn ease 1s;
+    animation: fadeIn_sec ease 1s;
 }
 
 
@@ -162,6 +163,11 @@ p{
 
 }
 
+.trailer_vdo{
+    margin-top:1rem;
+    margin-bottom: 1rem;
+}
+
 .next-to-next{
     display:flex;
     flex-direction: row;
@@ -190,63 +196,30 @@ p{
 }
 
 .box-dark{
-    min-width:25vmin;
-    min-height: 12vmin;
-    max-width:30vmin;
-    max-height:20vmin;
-
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    height: 60%;
-
-    justify-content: center;
-    vertical-align: middle;
-
     border-color: var(--bg_color);
     border: 0.2rem;
     border-style: solid;
-    padding: 5rem;
-    /*flex-basis:0;*/
+    
+    margin: 1rem;
+    padding: 4rem;
+    flex-basis:0;
 
-    align-items: center;
-    align-content: center;position: relative;
+    min-width:26vmin;
+    max-width:30vmin;
+    max-height:25vmin;
+
+    align-self: center;
+    align-content: center;
+    justify-content:center;
+    justify-self: center;
 }
 
 
-
-/**Navigation Bar**/
+/**Mobile Design**/
 .navbar{
-    background-color: var(--prim_color);
-    padding: 0.25rem 0.5rem 0.25rem 0.5rem;
-    width:100%;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-
-    position: fixed;
-    top:0;
-    left:0;
+    display: none;
 }
 
-.navbar nav a{
-    overflow: hidden;
-    text-decoration: none;
-    color: var(--bg_color);
-    padding:3.5rem 1rem 1.5rem 1rem;
-    text-align: center;
-    font-weight: 700;
-    text-transform: uppercase;
-
-
-    border-radius: 1rem;
-}
-
-.navbar nav a:hover{
-    background-color: var(--txt_color);
-    animation: fadeIn ease 1s;
-}
 
 
 
@@ -258,6 +231,7 @@ p{
     align-content:space-around;
 
     flex-wrap:wrap;
+    height:86vh;
 }
 
 #img-container{
@@ -266,6 +240,7 @@ p{
 
 #content-container{
     display: flex;
+    flex-wrap:wrap;
     flex-direction: column;
     align-items: center;
     align-content: center;
@@ -275,7 +250,6 @@ p{
 #card_home{
     background-image: url("/assets/imgs/home-bg.jpg");
     background-color: var(--bg_color);
-    height:90vh;
 }
 
 #card_white{
@@ -327,7 +301,9 @@ p{
 }
 
 .bg:hover{
+
     background-image:linear-gradient(var(--prim_color),var(--sec_color));
+    
 }
 
 
@@ -392,27 +368,107 @@ p{
 
 /**Animation Keyframes**/
 
-@keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
+/**fadeInPrim**/
+@keyframes fadeIn_prim {
+    0% {background-color: var(--prim_color);}
+    100% {background-color: var(--sec_color);}
 }
-    
-@-moz-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
+@-moz-keyframes fadeIn_prim {
+    0% {background-color: var(--prim_color);}
+    100% {background-color: var(--sec_color);}
 }
-
-@-webkit-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
+@-webkit-keyframes fadeIn_prim {
+    0% {background-color: var(--prim_color);}
+    100% {background-color: var(--sec_color);}
 }
-
-@-o-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
+@-ms-keyframes fadeIn_prim {
+    0% {background-color: var(--prim_color);}
+    100% {background-color: var(--sec_color);}
 }
 
-@-ms-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
+/**fadeInSec**/
+@keyframes fadeIn_sec {
+    from {background-color: rgba(229, 218, 218, 0);}
+    to {background-color: rgba(229, 218, 218, 1);}
+}
+@-moz-keyframes fadeIn_sec {
+    from {background-color: rgba(229, 218, 218, 0);}
+    to {background-color: rgba(229, 218, 218, 1);}
+}
+@-webkit-keyframes fadeIn_sec {
+    from {background-color: rgba(229, 218, 218, 0);}
+    to {background-color: rgba(229, 218, 218, 1);}
+}
+@-ms-keyframes fadeIn_sec {
+    from {background-color: rgba(229, 218, 218, 0);}
+    to {background-color: rgba(229, 218, 218, 1);}
+}
+
+/**fadeInNav**/
+@keyframes fadeIn_nav {
+    0% {background-color: var(--prim_color);}
+    100% {background-color: var(--txt_color);}
+}
+@-moz-keyframes fadeIn_nav {
+    0% {background-color: var(--prim_color);}
+    100% {background-color: var(--txt_color);}
+}
+@-webkit-keyframes fadeIn_nav {
+    0% {background-color: var(--prim_color);}
+    100% {background-color: var(--txt_color);}
+}
+@-ms-keyframes fadeIn_nav {
+    0% {background-color: var(--prim_color);}
+    100% {background-color: var(--txt_color);}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/**Responsive Code from IPad Size Onwards**/
+@media only screen and (min-width:768px){
+    /**Navigation Bar**/
+    .navbar{
+        background-color: var(--prim_color);
+        padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+        width:100%;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+
+        position: fixed;
+        top:0;
+        left:0;
+    }
+
+    .navbar nav a{
+        overflow: hidden;
+        text-decoration: none;
+        color: var(--bg_color);
+        padding:3.5rem 1rem 1.5rem 1rem;
+        text-align: center;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        border-radius: 1rem;
+    }
+
+    .navbar nav a:hover{
+        background-color: var(--txt_color);
+        animation: fadeIn_nav ease 1s;
+    }
+
+    .navitem{
+        font-size: 0.8rem;
+    }
 }
