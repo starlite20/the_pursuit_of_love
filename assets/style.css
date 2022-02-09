@@ -124,12 +124,15 @@ p{
     border-color: var(--prim_color);
     border-width:0.1rem;
 
+    background-color: var(--bg_color);
     color: var(--prim_color);
 }
 
 .sec_link:hover{
     background-color: var(--txt_color);
     animation: fadeIn_sec ease 1s;
+    color: var(--prim_color);
+    font-weight: 700;
 }
 
 
@@ -299,10 +302,13 @@ p{
 }
 
 .bg:hover{
-
     background-image:linear-gradient(var(--prim_color),var(--sec_color));
-    
 }
+
+.bg2:hover{
+    background-image:linear-gradient(var(--prim_color),var(--txt_color));
+}
+
 
 
 
@@ -386,19 +392,19 @@ p{
 
 /**fadeInSec**/
 @keyframes fadeIn_sec {
-    from {background-color: rgba(229, 218, 218, 0);}
+    from {background-color: var(--bg_color);}
     to {background-color: rgba(229, 218, 218, 1);}
 }
 @-moz-keyframes fadeIn_sec {
-    from {background-color: rgba(229, 218, 218, 0);}
+    from {background-color: var(--bg_color);}
     to {background-color: rgba(229, 218, 218, 1);}
 }
 @-webkit-keyframes fadeIn_sec {
-    from {background-color: rgba(229, 218, 218, 0);}
+    from {background-color: var(--bg_color);}
     to {background-color: rgba(229, 218, 218, 1);}
 }
 @-ms-keyframes fadeIn_sec {
-    from {background-color: rgba(229, 218, 218, 0);}
+    from {background-color:  var(--bg_color);}
     to {background-color: rgba(229, 218, 218, 1);}
 }
 
@@ -452,7 +458,7 @@ p{
     .navbar nav a{
         overflow: hidden;
         text-decoration: none;
-        color: var(--bg_color);
+        color: var(--txt_color);
         padding:3.5rem 1rem 1.5rem 1rem;
         text-align: center;
         font-weight: 700;
@@ -464,6 +470,7 @@ p{
     .navbar nav a:hover{
         background-color: var(--txt_color);
         animation: fadeIn_nav ease 1s;
+        color: var(--bg_color);
     }
 
     .navitem{
